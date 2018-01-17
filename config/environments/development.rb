@@ -43,4 +43,5 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'https://blocitoff-twr349.c9users.io' }
   
+ config.assets.compile = true
 end
