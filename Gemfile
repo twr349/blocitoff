@@ -39,6 +39,13 @@ source 'https://rubygems.org'
    gem 'listen', '~> 3.0.5'
  end
  
+ #rspec testing
+ group :development, :test do
+   gem 'rspec-rails', '~> 3.0'
+   gem 'rails-controller-testing'
+   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+ end
+ 
  gem 'figaro', '1.0'
  
  #Bootstrap
