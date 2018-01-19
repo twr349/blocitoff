@@ -4,6 +4,16 @@
       <h1>Blocitoff</h1>
       <h2> Welcome <%= current_user.email %></h2>
       <p><%= image_tag current_user.avatar_url(48) %></p>
+      <%= render partial: "items/form" %>
     </div>
-   </div>
+  </div>
+  <div class="container-fluid">
+    <% @items.each do |name| %>
+    <div class="col-md-3">
+      <div class="jumbotron">      
+        <h2><%= render name %></h2>
+      </div>
+    </div>
+    <% end %>
+  </div> 
 </div>
