@@ -12,6 +12,17 @@ class ItemsController < ApplicationController
      end
      redirect_to current_user
    end
- 
+   
+   def destroy
+    @item = Item.find(params[:id])
+    
+    if @item.destroy
+       flash[:notice] = "\"#{@item.name}\" was completed!."
+       redirect_to current_user
+     else
+       flash.now[:alert] = "Can not compute, try again."
+       render :show
+    end
+   end
     
 end
