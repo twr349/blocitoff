@@ -8,11 +8,19 @@ end
 
 users = User.all
 
-10.times do 
+20.times do 
     Item.create!(
     user: users.sample,
     name: Faker::Lorem.sentence,
     created_at: Faker::Date.backward(7)
+  )
+end
+
+20.times do 
+    Item.create!(
+    user: users.sample,
+    name: "old item!!",
+    created_at: "2018-01-01 17:16:58"
   )
 end
 
