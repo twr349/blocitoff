@@ -1,10 +1,9 @@
-require 'faker'
-
 10.times do
     User.create!(
     email: Faker::Internet.email, 
-    password: 'helloworld'
-)
+    password: 'helloworld',
+    confirmed_at: Time.now
+  )
 end
 
 users = User.all
@@ -13,7 +12,7 @@ users = User.all
     Item.create!(
     user: users.sample,
     name: Faker::Lorem.sentence
-)
+  )
 end
 
  puts "Seed finished"

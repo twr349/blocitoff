@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   
   def show
-    @user = User.find_by_email(params[:user_email])
     @item = Item.new
-    @items = Item.where(@user == current_user)
+    @items = current_user.items
   end
 end

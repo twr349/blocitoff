@@ -1,19 +1,18 @@
-<div class="container">
-  <div class="jumbotron">
-    <div class="container">
+<div class="row">
+  <div class="col-md-12">   
       <h1>Blocitoff</h1>
       <h2> Welcome <%= current_user.email %></h2>
       <p><%= image_tag current_user.avatar_url(48) %></p>
       <%= render partial: "items/form" %>
-    </div>
   </div>
-  <div class="container-fluid">
-    <% @items.each do |name| %>
-    <div class="col-md-3">
-      <div class="jumbotron">      
-        <h2><%= render name %></h2>
-      </div>
+
+  <% @items.in_groups_of(4) do |group| %>
+    <div class="row">
+      <% group.each do |item| %>
+        <div class="col-md-3">
+          <h2><%= render item if item %></h2>
+        </div>
+      <% end %>
     </div>
-    <% end %>
-  </div> 
+  <% end %>
 </div>
