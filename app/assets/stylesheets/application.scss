@@ -29,23 +29,24 @@
      background-color: rgba(211, 211, 211, 0.6);
  }
  
- #showMain h1 {
+ .jumbotron {
+     background: none;
+     text-align: center;
+     background-color: rgba(211, 211, 211, 0.6);
+ }
+ 
+ #showMain h1, h2, p {
      font-family: 'Anton';
      color: 7e7e7e;
  }
  
- #showMain p {
+ .jumbotron h1, h2, p {
      font-family: 'Anton';
      color: 7e7e7e;
  }
  
  .container {
      padding-top: 20px;
- }
- 
- #showMain h2 {
-     font-family: 'Anton';
-     color: 7e7e7e;
  }
  
  .field {
