@@ -11,7 +11,8 @@ users = User.all
 10.times do 
     Item.create!(
     user: users.sample,
-    name: Faker::Lorem.sentence
+    name: Faker::Lorem.sentence,
+    created_at: Faker::Date.backward(7)
   )
 end
 

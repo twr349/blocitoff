@@ -23,18 +23,18 @@
   background: image-url('wall.jpg');
  }
  
- .jumbotron {
+ #showMain {
      background: none;
      text-align: center;
      background-color: rgba(211, 211, 211, 0.6);
  }
  
- .jumbotron h1 {
+ #showMain h1 {
      font-family: 'Anton';
      color: 7e7e7e;
  }
  
- .jumbotron p {
+ #showMain p {
      font-family: 'Anton';
      color: 7e7e7e;
  }
@@ -43,7 +43,7 @@
      padding-top: 20px;
  }
  
- .jumbotron h2 {
+ #showMain h2 {
      font-family: 'Anton';
      color: 7e7e7e;
  }
