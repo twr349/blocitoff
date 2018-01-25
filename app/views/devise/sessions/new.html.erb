@@ -3,6 +3,7 @@
     <h1>Log in</h1>
     <h3>A todo application that gives you 7 days to complete your task.</h3>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <form>
       <div class="form-group">
         <div class="field">
           <%= f.label :email %><br />
@@ -25,6 +26,7 @@
         <%= f.submit "Log in", class: "btn btn-default" %>
       </div>
     <% end %>
+    </form>
     <%= render "devise/shared/links" %>
   </div>
 </div>
