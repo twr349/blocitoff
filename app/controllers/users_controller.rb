@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
-    redirect_to users_sign_in
+    flash[:success] = "Account deleted"
+    redirect_to new_user_session_url
   end
 
 end
